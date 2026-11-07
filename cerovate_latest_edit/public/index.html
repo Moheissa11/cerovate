@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070a12" />
+  <meta name="description" content="CEROVATE — compare planetary environments and explore mission concepts." />
+  <title>CEROVATE — Beyond the known</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=cero-staged-intro-nasa-galleries-8" />
+</head>
+<body>
+  <div class="space-noise"></div>
+  <div class="stars stars-a"></div><div class="stars stars-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Cerovate home"><span class="brand-mark">◉</span> CERO<span>VATE</span></a>
+    <nav class="nav">
+      <a href="#explore" data-i18n="navExplore">Explore</a>
+      <a class="nav-3d" href="#compare">3D</a>
+      <a href="#compare" data-i18n="navCompare">3D Compare</a>
+      <a href="#standard-compare">Text Compare</a>
+      <a href="#mission" data-i18n="navMission">Mission Lab</a>
+      <a href="#research" data-i18n="navResearch">Research</a>
+    </nav>
+    <button class="lang-btn" id="languageToggle" aria-label="Switch language">عربي</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span><span data-i18n="heroEyebrow">PLANETARY INTELLIGENCE · MISSION CONCEPTS</span></div>
+        <h1 data-i18n="heroTitle">A new way to<br><em>think beyond Earth.</em></h1>
+        <p data-i18n="heroText">Explore worlds, compare their environments, and turn the hardest planetary challenges into smarter mission ideas.</p>
+        <div class="hero-actions">
+          <a class="primary-btn lift" href="#explore"><span data-i18n="startExploring">Start exploring</span><b>↗</b></a>
+          <a class="text-link" href="#mission" data-i18n="howItWorks">How it works <span>↓</span></a>
+        </div>
+        <div class="hero-proof"><span class="proof-line"></span><span data-i18n="heroFoot">BUILT FOR THE NEXT FRONTIER</span></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet planet-hero" aria-label="High-resolution Earth"></div>
+        <div class="planet-moon"></div>
+        <div class="float-label label-top"><span class="tiny-dot"></span> 01 / DISCOVER</div>
+        <div class="float-label label-bottom">MISSION SYSTEM <b>ONLINE</b></div>
+        <div class="visual-glow"></div>
+      </div>
+      <div class="scroll-cue"><span></span><small data-i18n="scroll">SCROLL TO EXPLORE</small></div>
+    </section>
+
+    <section class="intro section" id="explore">
+      <div class="section-kicker reveal">01 — <span data-i18n="discoverKicker">DISCOVER THE ENVIRONMENT</span></div>
+      <div class="section-heading reveal">
+        <h2 data-i18n="discoverTitle">Every world has<br>a different <em>story.</em></h2>
+        <p data-i18n="discoverText">Start with the Moon and Mars, then describe any destination you want to investigate. CEROVATE turns the details into a mission-focused comparison.</p>
+      </div>
+      <div class="world-grid">
+        <article class="world-card moon-card reveal lift" data-world="Moon">
+          <div class="world-image moon-image"></div><div class="card-index">WORLD 01 / NATURAL SATELLITE</div>
+          <div class="world-bottom"><div><h3 data-i18n="moon">The Moon</h3><p data-i18n="moonDesc">Airless. Ancient. Extreme.</p></div><button class="round-arrow select-world" data-place="Moon" aria-label="Explore the Moon">↗</button></div>
+        </article>
+        <article class="world-card mars-card reveal lift" data-world="Mars">
+          <div class="world-image mars-image"></div><div class="card-index">WORLD 02 / TERRESTRIAL PLANET</div>
+          <div class="world-bottom"><div><h3 data-i18n="mars">Mars</h3><p data-i18n="marsDesc">Dusty. Cold. Full of questions.</p></div><button class="round-arrow select-world" data-place="Mars" aria-label="Explore Mars">↗</button></div>
+        </article>
+        <article class="world-card custom-card reveal lift">
+          <div class="custom-orb">＋</div><div class="card-index">WORLD 03 / YOUR NEXT TARGET</div>
+          <div class="world-bottom"><div><h3 data-i18n="yourWorld">Your world.</h3><p data-i18n="yourWorldDesc">Bring a location into focus.</p></div><a class="round-arrow" href="#compare" aria-label="Add a destination">↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="compare-section section" id="compare">
+      <div class="section-kicker reveal">02 — <span data-i18n="compareKicker">COMPARE & UNDERSTAND</span></div>
+      <div class="section-heading reveal">
+        <h2 data-i18n="compareTitle">Put any place<br>under the <em>lens.</em></h2>
+        <p data-i18n="compareText">Enter a destination and the environmental details you know. Unknown fields are okay — the analysis will flag what still needs evidence.</p>
+      </div>
+      <form class="compare-panel reveal" id="compareForm">
+        <div class="form-top"><div><span class="form-label">3D EXPLORER</span><h3>Search a place or two things to compare</h3></div><span class="form-tag">3D VIEW · SIDE BY SIDE</span></div>
+        <div class="lookup-grid">
+          <label><span>Search the first place or object</span><input id="place" name="place" required placeholder="e.g. Mars, Eiffel Tower, Cairo, Saturn" /></label>
+          <label><span>Search a second place or object (optional)</span><input id="place2" name="place2" placeholder="e.g. Moon, Pyramids, Jupiter" /></label>
+        </div>
+        <div class="form-bottom"><p>Type a planet, moon, region, city, or landmark. CEROVATE searches for information automatically — no manual temperature or gravity entry needed.</p><button class="primary-btn lift" type="submit"><span>Search in 3D</span><b>↗</b></button></div>
+      </form>
+      <div class="comparison-result hidden" id="comparisonResult" aria-live="polite"></div>
+    </section>
+
+    <section class="standard-compare-section section" id="standard-compare">
+      <div class="section-kicker">03 — STANDARD COMPARISON</div>
+      <div class="section-heading"><h2>Compare without <em>3D.</em></h2><p>بحث عادي لعنصرين، يعرض المعلومات جنب بعض من غير أي مجسمات أو مؤثرات 3D.</p></div>
+      <form class="compare-panel" id="standardCompareForm">
+        <div class="form-top"><div><span class="form-label">TEXT COMPARISON</span><h3>Compare two things</h3></div><span class="form-tag">SIDE BY SIDE · TEXT ONLY</span></div>
+        <div class="lookup-grid"><label><span>First item</span><input id="standardFirst" required placeholder="e.g. Earth" /></label><label><span>Second item</span><input id="standardSecond" required placeholder="e.g. Mars" /></label></div>
+        <div class="form-bottom"><p>نتائج نصية ومصادر للعنصرين، بدون عرض 3D.</p><button class="primary-btn lift" type="submit"><span>Compare normally</span><b>↗</b></button></div>
+      </form>
+      <div class="comparison-result hidden" id="standardCompareResult" aria-live="polite"></div>
+    </section>
+
+    <section class="mission-section section" id="mission">
+      <div class="section-kicker reveal">04 — <span data-i18n="missionKicker">FROM PROBLEM TO POSSIBILITY</span></div>
+      <div class="mission-layout">
+        <div class="mission-copy reveal"><h2 data-i18n="missionTitle">Don't just explore.<br><em>Imagine what comes next.</em></h2><p data-i18n="missionText">CEROVATE can shape a challenge into a research direction, possible countermeasures, and a robot concept designed around the environment.</p>
+          <div class="mission-steps">
+            <div><span>01</span><p><b data-i18n="stepOne">Understand the challenge</b><small data-i18n="stepOneDesc">Identify environmental limits and mission risks.</small></p></div>
+            <div><span>02</span><p><b data-i18n="stepTwo">Research the evidence</b><small data-i18n="stepTwoDesc">Start from trusted scientific and mission sources.</small></p></div>
+            <div><span>03</span><p><b data-i18n="stepThree">Design a response</b><small data-i18n="stepThreeDesc">Explore a practical solution and robotic helper.</small></p></div>
+          </div>
+        </div>
+        <div class="robot-stage reveal" id="robotStage" role="button" tabindex="0" aria-label="Talk to the CEROVATE robot">
+          <div class="robot-halo"></div><div class="robot-grid"></div>
+          <div class="robot">
+            <div class="robot-antenna"></div><div class="robot-head"><span class="robot-eye"></span></div>
+            <div class="robot-neck"></div><div class="robot-body"><span class="robot-light"></span><span class="robot-panel"></span></div>
+            <div class="robot-arm arm-left"></div><div class="robot-arm arm-right"></div>
+            <div class="robot-leg leg-left"><i></i></div><div class="robot-leg leg-center"><i></i></div><div class="robot-leg leg-right"><i></i></div>
+          </div>
+          <div class="robot-caption"><span>CONCEPT / 001</span><b>Autonomous field explorer</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-section section" id="research">
+      <div class="research-card reveal">
+        <div><div class="section-kicker">04 — RESEARCH DESK</div><h2 data-i18n="researchTitle">Curiosity needs<br><em>credible sources.</em></h2><p data-i18n="researchText">Explore official planetary data and NASA image collections. Search results are useful leads; always open the original record and verify its context.</p></div>
+        <div class="research-links">
+          <a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noreferrer"><span>NASA / SCIENCE</span><b>Solar System Exploration ↗</b></a>
+          <a href="https://pds.nasa.gov/" target="_blank" rel="noreferrer"><span>NASA / ARCHIVE</span><b>Planetary Data System ↗</b></a>
+          <a href="https://images.nasa.gov/" target="_blank" rel="noreferrer"><span>NASA / MEDIA</span><b>Image & Video Library ↗</b></a>
+          <a href="https://www.nasa.gov/hrp/" target="_blank" rel="noreferrer"><span>NASA / HUMAN SPACEFLIGHT</span><b>Human Research Program ↗</b></a>
+        </div>
+      </div>
+      <div class="image-search reveal">
+        <div><span class="form-label">NASA IMAGE LIBRARY</span><h3 data-i18n="imageSearchTitle">Bring the universe closer.</h3></div>
+        <form id="imageSearchForm"><input id="imageQuery" value="Mars rover" aria-label="Search NASA images"><button class="outline-btn lift" type="submit" data-i18n="searchImages">Search images ↗</button></form>
+        <div id="imageResults" class="image-results"></div>
+      </div>
+    </section>
+  </main>
+  <aside class="chat-panel" id="chatPanel" aria-label="Talk to CEROVATE robot" aria-hidden="true">
+    <div class="chat-head"><div class="chat-robot-mini" aria-hidden="true"><i></i><b></b></div><div><span class="live-dot"></span><b>CEROVATE AI</b><small>MISSION COMPANION · ONLINE</small></div><button id="closeChat" aria-label="Close chat">×</button></div>
+    <div class="chat-messages" id="chatMessages"><div class="chat-bubble bot">Hello, explorer! 👋 I'm Cero, your space companion. Ask me about planets, moons, places, or space missions.</div></div>
+    <form id="chatForm"><input id="chatInput" placeholder="Ask me anything about space…" autocomplete="off" required><button type="submit">➤</button></form>
+  </aside>
+  <footer><a class="brand" href="#home"><span class="brand-mark">◉</span> CERO<span>VATE</span></a><p data-i18n="footerText">A student concept for exploring the next frontier. Not an official NASA product.</p><span>SPACE APPS CONCEPT · 2026</span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <button class="sidekick-launcher" id="sidekickLauncher" type="button" aria-label="Open Cero chat" aria-controls="chatPanel" aria-expanded="false">
+    <span class="sidekick-hint" id="sidekickHint">Need a hand? I can help!</span>
+    <span class="welcome-bubble" id="welcomeBubble" role="status">Welcome to CEROVATE! I’m Cero. Let’s explore the universe together. 🚀</span>
+    <span class="sidekick-robot" aria-hidden="true">
+      <span class="robot-antenna"></span>
+      <span class="robot-head"><span class="robot-eye"></span><span class="robot-smile"></span></span>
+      <span class="robot-neck"></span>
+      <span class="robot-body"><span class="robot-light"></span><span class="robot-panel"></span></span>
+      <span class="robot-arm arm-left"></span><span class="robot-arm arm-right"></span>
+      <span class="robot-wheel wheel-a"></span><span class="robot-wheel wheel-b"></span><span class="robot-wheel wheel-c"></span>
+    </span>
+  </button>
+  <button class="edge-peek" id="edgePeek" type="button" aria-label="Open Cero chat"><span class="peek-antenna"></span><span class="peek-face"><i></i><b></b></span><span class="peek-fingers"><i></i><i></i><i></i><i></i></span></button>
+  <script src="/app.js?v=staged-intro-nasa-galleries-8"></script>
+</body>
+</html>
